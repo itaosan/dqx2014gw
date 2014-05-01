@@ -105,8 +105,9 @@
             // create the object
             var object = bucket.createObject();
             
+	    var textdata = $("#textdata").val();
             // set a key/value pair
-            object.set(KEY_NAME, "MyObject " + (++objectCount));
+            object.set(KEY_NAME, textdata);
             
             // perform an asynchronous creation, with callbacks
             object.save({
@@ -206,6 +207,7 @@
     <div data-role="header" data-theme="c">
         <h1>My Objects</h1>
     	<a href="javascript:addToList()" data-icon="plus" data-theme="b">Add</a>
+	<textarea id="textdata" name="textdata" id="basic" value=""  cols="50" rows="10"></textarea>
     </div>
     <!-- END HEADER -->
     
