@@ -176,6 +176,7 @@
                     
                     // refresh the list to show the added results
                     $("#listview").listview('refresh');
+			drawVisualization();
 
                     // hide the loader
                     $.mobile.hidePageLoadingMsg();	
@@ -199,7 +200,6 @@
         // when this page loads, load the existing objects from the server
         $("#listPage").live('pageinit', function() {
             loadList();
-		drawVisualization();
         });
 
     google.load('visualization', '1', {packages: ['annotatedtimeline']});
